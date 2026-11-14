@@ -23,10 +23,10 @@ A decentralized, distributed smart grid simulation written in C using CycloneDDS
 * Decentralized Architecture: No central master controller is required. Nodes publish their state and subscribe to the global grid state via a shared DDS topic. 
 * Lexicographical Priority: Consumers and generators are prioritized alphabetically by their unique IDs (e.g., "gen_a" has higher priority than "gen_b").
 * Node Roles:
-  Generator: Supplies power to meet active demand. Supports 24-hour solar output profiles (--factor24) and finite fuel/runtime capacity (--capacity).
-  Consumer: Draws power when sufficient generation or battery capacity is available after higher-priority loads are satisfied.
-  Battery: Operates dynamically as either a load (charging during power surplus up to 100%) or a generator (discharging during power deficit down to 0%).
-  Logger: Runs in read-only mode (no DataWriter) to monitor and print real-time snapshots of the entire grid.
+  - Generator: Supplies power to meet active demand. Supports 24-hour solar output profiles (--factor24) and finite fuel/runtime capacity (--capacity).
+  - Consumer: Draws power when sufficient generation or battery capacity is available after higher-priority loads are satisfied.
+  - Battery: Operates dynamically as either a load (charging during power surplus up to 100%) or a generator (discharging during power deficit down to 0%).
+  - Logger: Runs in read-only mode (no DataWriter) to monitor and print real-time snapshots of the entire grid.
 * Startup / Shutdown Delays: Simulates realistic hardware switching times (--switch) using intermediate STARTING_UP and SHUTTING_DOWN states.
 
 
