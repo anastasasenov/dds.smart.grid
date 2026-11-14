@@ -38,17 +38,17 @@ A decentralized, distributed smart grid simulation written in C using CycloneDDS
 
 ### Build Instructions
 
-    Generate C source and header files from the IDL definition:
-   ```bash
-   idlc SmartGrid.idl
-   ```
+Generate C source and header files from the IDL definition:
+
+   $ idlc SmartGrid.idl
+   
    This generates `SmartGrid.h` and `SmartGrid.c`.
 
-    Compile the application:
-   ```bash
-   gcc main.c SmartGrid.c -o smartgrid -lddsc
-   ```
-   CMakeLists.txt file is included to simplify the build process.
+Compile the application:
+   
+   $ gcc main.c SmartGrid.c -o smartgrid -lddsc
+
+CMakeLists.txt file is included to simplify the build process.
 
 ### Command-Line Options
 
