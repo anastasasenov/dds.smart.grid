@@ -1,0 +1,47 @@
+module SmartGrid {
+
+    enum NodeType {
+        NODE_CONSUMER,
+        NODE_GENERATOR,
+        NODE_BATTERY,
+        NODE_LOGGER
+    };
+
+    enum NodeState {
+        STATE_OFF,
+        STATE_STARTING_UP,
+        STATE_RUNNING,
+        STATE_CHARGING,
+        STATE_DISCHARGING,
+        STATE_SHUTTING_DOWN,
+        STATE_DEPLETED
+    };
+
+    struct NodeStatus {
+        @key string<64> id;
+        NodeType type;
+        NodeState state;
+        double nominal_power;
+        double current_power;
+        long total_capacity_sec;
+        long remaining_capacity_sec;
+        double battery_percentage;
+        long switch_time_sec;
+        long long timestamp;
+    };
+
+    enum GridCommandType {
+        CMD_TURN_ON,
+        CMD_TURN_OFF,
+        CMD_CHARGE,
+        CMD_DISCHARGE,
+        CMD_SET_POWER_LIMIT
+    };
+
+    struct GridCommand {
+        @key string<64> target_id;
+        GridCommandType command;
+        double target_power;
+    };
+
+};
