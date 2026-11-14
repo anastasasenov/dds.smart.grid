@@ -8,6 +8,7 @@ A decentralized, distributed smart grid simulation written in C using CycloneDDS
 ### Architecture
 
 { Consumers } < -- > DDS Network < --- > { Generators/Batteries }
+
                          |                     
                      Logger/View
                      
