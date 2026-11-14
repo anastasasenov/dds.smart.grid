@@ -73,25 +73,25 @@ CMakeLists.txt file is included to simplify the build process.
 Example Simulation: Open separate terminal windows to launch multiple nodes and observe how the grid balances itself:
 
     Grid Logger:
-    ```bash
+    
     $ ./smartgrid --logger monitor_1
-    ```
+    
 
     Solar Generator (1000W peak, 2s startup/shutdown time):
-    ```bash
-    ./smartgrid --generator gen_a --power 1000 --capacity 3600 --switch 2 \
+    
+    $ ./smartgrid --generator gen_a --power 1000 --capacity 3600 --switch 2 \
         --factor24 0,0,0,0,0,10,30,50,70,90,100,100,100,90,70,50,30,10,0,0,0,0,0,0
-    ```
+    
 
     Start a Backup Battery (500W, 600s capacity, 50% initial charge):
-    ```bash
-    ./smartgrid --battery bat_1 --power 500 --capacity 600 --percentage 50 --switch 1
-    ```
+    
+    $ ./smartgrid --battery bat_1 --power 500 --capacity 600 --percentage 50 --switch 1
+    
 
     Start High-Priority and Low-Priority Consumers:
-    ```bash
-    ./smartgrid --consumer load_a --power 400 --capacity 1200 --switch 1
-    ./smartgrid --consumer load_b --power 800 --capacity 1200 --switch 1
-   ```
+    
+    $ ./smartgrid --consumer load_a --power 400 --capacity 1200 --switch 1
+    $ ./smartgrid --consumer load_b --power 800 --capacity 1200 --switch 1
+   
 
 
